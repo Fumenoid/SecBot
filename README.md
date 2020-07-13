@@ -22,5 +22,4 @@ The bot for my university security discord using discord.py
     ```python
     pipenv shell
     ```
-6. Create a `.env` file following the format of `.env_example`
-7. Run! `pipenv run python3 bot.py`
+6. `python3 bot.py`
