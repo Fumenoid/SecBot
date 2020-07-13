@@ -80,7 +80,7 @@ async def _help(ctx, helprole=None):  # role-vise help section
         await ctx.send('Please use this command in `#bot-commands`')
 
 
-# Channel desc message
+# Channel desc messages
 @bot.command(aliases=['chdesc', 'channeldesc'])
 async def channel_desc(ctx):
     if (str(ctx.message.channel) == 'bot-commands' or ctx.message.author.guild_permissions.manage_messages):
