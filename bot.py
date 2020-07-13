@@ -40,11 +40,11 @@ async def on_member_join(member):  # a function which works when any member join
     channel = discord.utils.get(member.guild.channels, name='honk-the-planet') # bot-commands
     bchannel = discord.utils.get(member.guild.channels, name='bot-commands')
     await channel.send(
-        f'***Hey there, {member.mention} Welcome to UPES Security Discord!***\n\n'
-        f'If you are new to discord here are some things that will help you get started...'
-        f'First, Discord is just another chat platform just properly organised and have bots _like i am_ :D'
-        f'Secound, go to {bchannel.mention} and type `$channeldesc`, you will get a list of all channels(chat rooms) and there purpose'
-        f'\n\nHope to we all learn and grow together :D')
+        f'**Hey there, {member.mention} Welcome to UPES Security Discord!**\n\n'
+        f'If you are new to discord here are some things that will help you get started...\n'
+        f'First, Discord is just another chat platform just properly organised and have bots _like i am_ :D\n'
+        f'Secound, go to {bchannel.mention} and type `$channeldesc`, you will get a list of all channels(chat rooms) and why we have them'
+        f'\n\nHappy hacking :D')
     role = discord.utils.get(member.guild.roles, name='h4cK0r5')
     await member.add_roles(role)
 

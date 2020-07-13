@@ -15,11 +15,11 @@ class ModeratorCog(commands.Cog):
                     amount=2):  # amount=2 sets the default value to 2 basically command + the text above that
         try:
             if ctx.message.author.guild_permissions.manage_messages:
-                if(amount<=50):
+                if(amount<=200):
                     await ctx.channel.purge(limit=amount + 1)  # limit= number of messages going to be deleted !
                     msg = await ctx.channel.send(f'Deleted {amount} messages D:')
                 else:
-                    await ctx.channel.send('Sorry, max 50 messages can be deleted at a time')
+                    await ctx.channel.send('Sorry, max 200 messages can be deleted at a time')
             else:
                 msg = await ctx.send('Sorry, it seems like you are not authorized to do it')
             await asyncio.sleep(5)
@@ -113,7 +113,7 @@ class ModeratorCog(commands.Cog):
             await asyncio.sleep(5)
             await ctx.message.delete()
         except:
-            await ctx.send('The bot is unauthorized to kick members.')
+            await ctx.send('Seems like the bot is not authorized to kick members.')
 
     # Ban Member Command..
     @commands.command()  # a function to ban members
@@ -140,7 +140,7 @@ class ModeratorCog(commands.Cog):
             await asyncio.sleep(5)
             await ctx.message.delete()
         except:
-            await ctx.sent('The bot is unauthorized to ban members.')
+            await ctx.sent('Seems like the bot is not unauthorized to ban members.')
 
 
 def setup(bot):
