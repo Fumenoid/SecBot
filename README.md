@@ -1,6 +1,6 @@
-# JHDBot
+# SecBot
 
-The bot of John Hammond discord using discord.py
+The bot for my university security discord using discord.py
 
 ## Setup
 
