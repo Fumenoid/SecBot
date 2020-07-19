@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 import asyncio
-
+import urllib
 
 class GeneralCog(commands.Cog):
 
