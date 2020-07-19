@@ -66,6 +66,15 @@ class GeneralCog(commands.Cog):
         else:
             await ctx.send('Please use this command in `#bot-commands`')
 
+    @commands.command(aliases=['lmgtfy'])
+    async def _lmgtfy(self, ctx, *, input):
+        if ctx.message.author.guild_permissions.manage_messages:
+            lmgtfyurl = 'https://lmgtfy.com/?q='
+            fullyurl = lmgtfyurl + urllib.parse.quote_plus(input, safe='')
+            await ctx.send(fullyurl)
+        else:
+            await ctx.send('Seems like you are not authorized to use this command D:')
+
 def setup(bot):
     bot.add_cog(GeneralCog(bot))
     print('General cog loaded')
