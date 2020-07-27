@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  watchtower:
+    image: containrrr/watchtower
+    container_name: watchtower
+    restart: "always"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: bot --debug True --interval 60
+    environment:
+      - WATCHTOWER_NOTIFICATIONS=shoutrrr
+      - WATCHTOWER_NOTIFICATION_URL=discord://${WEBHOOK_TOKEN}@${WEBHOOK_CHANNEL}
+  bot:
+    image: fumenoid/secbot
+    container_name: bot
+    restart: "always"
+    environment:
+      - bot_token=<token here>
+      - command_prefix=<command prefix here>
