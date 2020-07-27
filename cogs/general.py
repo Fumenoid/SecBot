@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 import asyncio
 import urllib
+import random
 
 class GeneralCog(commands.Cog):
 
@@ -24,6 +25,16 @@ class GeneralCog(commands.Cog):
     async def whoisfume(self, ctx):
         if (str(ctx.message.channel) == "bot-commands" or ctx.message.author.guild_permissions.manage_messages):
             await ctx.send(f'Fume is my daddy <3 !!')
+        else:
+            await ctx.send('Please use this command in `#bot-commands`')
+
+    # WhichTuna
+    @commands.command(aliases=['tunna'])
+    async def whichtuna(self, ctx):
+        if (str(ctx.message.channel) == "bot-commands" or ctx.message.author.guild_permissions.manage_messages):
+            li=['Cyber','Sed','Perv','Mad','Angry','Bored','Tired','Creepy','Blushing','Embarresed','Nervous','Racer','Osu','Scary','Silly','Clumsy','Gracious','Singer','Gamer','DJ','Hacker']
+            tuna = str(li[random.randint(0, 21)])
+            await ctx.send(f'Today\'s Tuna is {tuna}Tuna !!')
         else:
             await ctx.send('Please use this command in `#bot-commands`')
 
