@@ -6,7 +6,7 @@ import sys
 import os
 import random
 import helpembed
-import configfile
+#import configfile
 
 #load_dotenv()
 
