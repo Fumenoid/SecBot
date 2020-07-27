@@ -11,6 +11,7 @@ COPY helpembed.py .
 COPY requirements.txt .
 COPY configfile.py .
 
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
+RUN pip3 install --upgrade discord.py
 
-CMD ["python", "bot.py"]
+CMD ["python3", "bot.py"]
