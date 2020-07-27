@@ -19,6 +19,13 @@ class GeneralCog(commands.Cog):
         else:
             await ctx.send('Please use this command in `#bot-commands`')
 
+    # Who is daddy
+    @commands.command(aliases=['daddy','whoisdaddy','callmedaddy'])
+    async def whoisfume(self, ctx):
+        if (str(ctx.message.channel) == "bot-commands" or ctx.message.author.guild_permissions.manage_messages):
+            await ctx.send(f'Fume is my daddy <3 !!')
+        else:
+            await ctx.send('Please use this command in `#bot-commands`')
 
     # Report bot command
     @commands.command(aliases=['reportbot'])
